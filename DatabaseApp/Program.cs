@@ -1,10 +1,22 @@
-﻿namespace DatabaseApp
+﻿using System.Data;
+using System.Data.SqlClient;
+using System.Diagnostics;
+
+namespace DatabaseApp
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            //Connect to the databse
+            string connectionString = @"Data Source=AN-DEVICE\SQLEXPRESS;
+                                        Initial Catalog=ExampleDatabase;
+                                        User ID=Nieto;
+                                        Password=;
+                                        Trusted_Connection=Yes;";
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            Debug.WriteLine("Connected to the Server!");
         }
     }
 }
