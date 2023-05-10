@@ -6,9 +6,10 @@ namespace DatabaseApp
 {
     class Program
     {
+
         public static void Main(string[] args)
-        {
-            //Connect to the databse
+        {         
+            //Connect to the local database
             string connectionString = @"Data Source=AN-DEVICE\SQLEXPRESS;
                                         Initial Catalog=ExampleDatabase;
                                         User ID=Nieto;
