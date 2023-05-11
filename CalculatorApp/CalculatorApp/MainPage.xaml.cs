@@ -44,7 +44,23 @@ namespace CalculatorApp
         }
         private void HandleClickOnEquals(object sender, EventArgs e)
         {
-
+            int result = 0;
+            switch(symbol)
+            {
+                case "+":
+                    result = number1 + number2;
+                    break;
+                case "-":
+                    result = number1 - number2;
+                    break;
+                case "*":
+                    result = number1 * number2;
+                    break;
+                case "%":
+                    result = number1 % number2;
+                    break;
+            }
+            label.Text += " = " + result.ToString();
         }
         private void HandleClickOnClear(object sender, EventArgs e)
         {
