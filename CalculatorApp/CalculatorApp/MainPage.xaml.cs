@@ -38,7 +38,9 @@ namespace CalculatorApp
         }
         private void HandleClickOnSymbol(object sender, EventArgs e)
         {
-
+            string sign = (sender as Button).Text;
+            symbol = sign;
+            label.Text += " " + sign;
         }
         private void HandleClickOnEquals(object sender, EventArgs e)
         {
