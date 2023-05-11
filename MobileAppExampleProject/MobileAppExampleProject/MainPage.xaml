@@ -4,7 +4,7 @@
              x:Class="MobileAppExampleProject.MainPage">
 
     <StackLayout>
-        <Button Text="Click Me" Clicked="HandleClick"/>
+        <Button x:Name="myButton" Text="Click Me" Clicked="MyButton_Clicked"/>
     </StackLayout>
 
 </ContentPage>

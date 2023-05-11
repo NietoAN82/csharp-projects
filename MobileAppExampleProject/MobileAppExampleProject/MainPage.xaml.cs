@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
 namespace MobileAppExampleProject
 {
@@ -13,11 +14,20 @@ namespace MobileAppExampleProject
         public MainPage()
         {
             InitializeComponent();
+            
         }
-
-        void HandleClick(object sender, EventArgs e)
+        private async Task PulsateButton(Xamarin.Forms.Button myButton)
         {
-            (sender as Button).Text = "Thanks";
+            uint duration = 1000; // pulse duration in milliseconds
+            uint halfDuration = duration / 2;
+
+            await myButton.ScaleTo(1.2, halfDuration); // increase the button size
+            await Task.Delay((int)halfDuration); // wait for half the duration
+            await myButton.ScaleTo(1, halfDuration); // decrease the button size
+        }
+        private async void MyButton_Clicked(object sender, EventArgs e)
+        {
+            await PulsateButton(myButton);
         }
     }
 }
