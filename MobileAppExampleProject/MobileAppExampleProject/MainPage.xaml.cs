@@ -14,5 +14,10 @@ namespace MobileAppExampleProject
         {
             InitializeComponent();
         }
+
+        void HandleClick(object sender, EventArgs e)
+        {
+            (sender as Button).Text = "Thanks";
+        }
     }
 }

@@ -4,7 +4,7 @@
              x:Class="MobileAppExampleProject.MainPage">
 
     <StackLayout>
-        <Slider Maximum="10" Minimum="0" BackgroundColor="Black" VerticalOptions="CenterAndExpand"/>
+        <Button Text="Click Me" Clicked="HandleClick"/>
     </StackLayout>
 
 </ContentPage>
