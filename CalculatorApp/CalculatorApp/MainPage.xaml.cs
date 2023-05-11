@@ -15,37 +15,40 @@ namespace CalculatorApp
         int number2;
         string symbol;
         bool isFirstClick = true;
-
+        string numberString = "";
 
         public MainPage()
         {
             InitializeComponent();
             label = this.FindByName<Label>("text");
         }
+
         private void HandleClickOnNumber(object sender, EventArgs e)
         {
             string num = (sender as Button).Text;
             label.Text += " " + num;
-            if (isFirstClick)
-            {
-                isFirstClick = false;
-                number1 = int.Parse(num);
-            }
-            else
-            {
-                number2 = int.Parse(num);
-            }
+            numberString += num;
         }
+
         private void HandleClickOnSymbol(object sender, EventArgs e)
         {
             string sign = (sender as Button).Text;
             symbol = sign;
             label.Text += " " + sign;
+            // parse number1 from the input string
+            number1 = int.Parse(numberString);
+            // reset numberString for the next input number
+            numberString = "";
+            isFirstClick = false;
         }
+
         private void HandleClickOnEquals(object sender, EventArgs e)
         {
+            // parse number2 from the input string
+            int number2 = int.Parse(numberString);
+
             int result = 0;
-            switch(symbol)
+            switch (symbol)
             {
                 case "+":
                     result = number1 + number2;
@@ -61,13 +64,15 @@ namespace CalculatorApp
                     break;
             }
             label.Text += " = " + result.ToString();
-        }
-        private void HandleClickOnClear(object sender, EventArgs e)
-        {
-            //Reset label.text and the isFirstClick value
-            isFirstClick = true;
-            label.Text = "";
+            numberString = "";
         }
 
+        private void HandleClickOnClear(object sender, EventArgs e)
+        {
+            isFirstClick = true;
+            numberString = "";
+            label.Text = "";
+        }
     }
+
 }
