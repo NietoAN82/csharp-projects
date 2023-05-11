@@ -10,13 +10,31 @@ namespace CalculatorApp
 {
     public partial class MainPage : ContentPage
     {
+        Label label;
+        int number1;
+        int number2;
+        string symbol;
+        bool isFirstClick = true;
+
+
         public MainPage()
         {
             InitializeComponent();
+            label = this.FindByName<Label>("text");
         }
         private void HandleClickOnNumber(object sender, EventArgs e)
         {
-
+            string num = (sender as Button).Text;
+            label.Text += " " + num;
+            if (isFirstClick)
+            {
+                isFirstClick = false;
+                number1 = int.Parse(num);
+            }
+            else
+            {
+                number2 = int.Parse(num);
+            }
         }
         private void HandleClickOnSymbol(object sender, EventArgs e)
         {
