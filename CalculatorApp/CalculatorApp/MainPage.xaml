@@ -4,21 +4,135 @@
              x:Class="CalculatorApp.MainPage">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+        <!--This label will show the input as the user hits the key on the calculator.-->
+        <Label x:Name="text" Text="" TextColor="Black" />
+        <Grid x:Name="MainGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.25*" />
+                <ColumnDefinition Width="0.25*" />
+                <ColumnDefinition Width="0.25*" />
+                <ColumnDefinition Width="0.25*" />
+            </Grid.ColumnDefinitions>
+            <!--Create buttons for the calculator-->
+            <Button Text="1"
+                    x:Name="btn1"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Clicked="HandleClickOnNumber" />
+            <Button Text="2"
+                    x:Name="btn2"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Clicked="HandleClickOnNumber" />
+            <Button Text="3"
+                    x:Name="btn3"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Clicked="HandleClickOnNumber" />
+            <Button Text="4"
+                    x:Name="btn4"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    Grid.Row="0"
+                    Grid.Column="3"
+                    Clicked="HandleClickOnNumber" />
+            <Button Text="5"
+                    x:Name="btn5"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Clicked="HandleClickOnNumber" />
+            <Button Text="6"
+                    x:Name="btn6"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Clicked="HandleClickOnNumber" />
+            <Button Text="7"
+                    x:Name="btn7"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Clicked="HandleClickOnNumber" />
+            <Button Text="8"
+                    x:Name="btn8"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    Clicked="HandleClickOnNumber" />
+            <Button Text="9"
+                    x:Name="btn9"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Clicked="HandleClickOnNumber" />
+            <Button Text="0"
+                    x:Name="btn0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Clicked="HandleClickOnNumber" />
+            <Button Text="+"
+                    x:Name="plus"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Clicked="HandleClickOnSymbol" />
+            <Button Text="-"
+                    x:Name="minus"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    Grid.Row="2"
+                    Grid.Column="3"
+                    Clicked="HandleClickOnSymbol" />
+            <Button Text="*"
+                    x:Name="multiply"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Clicked="HandleClickOnSymbol" />
+            <Button Text="%"
+                    x:Name="divide"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Clicked="HandleClickOnSymbol" />
+            <Button Text="="
+                    x:Name="equals"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    Clicked="HandleClickOnEquals" />
+            <Button Text="clear"
+                    x:Name="clear"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    Grid.Row="3"
+                    Grid.Column="3"
+                    Clicked="HandleClickOnClear" />
+        </Grid>
     </StackLayout>
 
 </ContentPage>

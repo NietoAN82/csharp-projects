@@ -14,5 +14,22 @@ namespace CalculatorApp
         {
             InitializeComponent();
         }
+        private void HandleClickOnNumber(object sender, EventArgs e)
+        {
+
+        }
+        private void HandleClickOnSymbol(object sender, EventArgs e)
+        {
+
+        }
+        private void HandleClickOnEquals(object sender, EventArgs e)
+        {
+
+        }
+        private void HandleClickOnClear(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
