@@ -403,3 +403,29 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio
+MobileAppExampleProject/MobileAppExampleProject.iOS/AppDelegate.cs
+MobileAppExampleProject/MobileAppExampleProject.iOS/Entitlements.plist
+MobileAppExampleProject/MobileAppExampleProject.iOS/Info.plist
+MobileAppExampleProject/MobileAppExampleProject.iOS/Main.cs
+MobileAppExampleProject/MobileAppExampleProject.iOS/MobileAppExampleProject.iOS.csproj
+MobileAppExampleProject/MobileAppExampleProject.iOS/Assets.xcassets/AppIcon.appiconset/Contents.json
+MobileAppExampleProject/MobileAppExampleProject.iOS/Assets.xcassets/AppIcon.appiconset/Icon1024.png
+MobileAppExampleProject/MobileAppExampleProject.iOS/Assets.xcassets/AppIcon.appiconset/Icon120.png
+MobileAppExampleProject/MobileAppExampleProject.iOS/Assets.xcassets/AppIcon.appiconset/Icon152.png
+MobileAppExampleProject/MobileAppExampleProject.iOS/Assets.xcassets/AppIcon.appiconset/Icon167.png
+MobileAppExampleProject/MobileAppExampleProject.iOS/Assets.xcassets/AppIcon.appiconset/Icon180.png
+MobileAppExampleProject/MobileAppExampleProject.iOS/Assets.xcassets/AppIcon.appiconset/Icon20.png
+MobileAppExampleProject/MobileAppExampleProject.iOS/Assets.xcassets/AppIcon.appiconset/Icon29.png
+MobileAppExampleProject/MobileAppExampleProject.iOS/Assets.xcassets/AppIcon.appiconset/Icon40.png
+MobileAppExampleProject/MobileAppExampleProject.iOS/Assets.xcassets/AppIcon.appiconset/Icon58.png
+MobileAppExampleProject/MobileAppExampleProject.iOS/Assets.xcassets/AppIcon.appiconset/Icon60.png
+MobileAppExampleProject/MobileAppExampleProject.iOS/Assets.xcassets/AppIcon.appiconset/Icon76.png
+MobileAppExampleProject/MobileAppExampleProject.iOS/Assets.xcassets/AppIcon.appiconset/Icon80.png
+MobileAppExampleProject/MobileAppExampleProject.iOS/Assets.xcassets/AppIcon.appiconset/Icon87.png
+MobileAppExampleProject/MobileAppExampleProject.iOS/Properties/AssemblyInfo.cs
+MobileAppExampleProject/MobileAppExampleProject.iOS/Resources/Default.png
+MobileAppExampleProject/MobileAppExampleProject.iOS/Resources/Default@2x.png
+MobileAppExampleProject/MobileAppExampleProject.iOS/Resources/Default-568h@2x.png
+MobileAppExampleProject/MobileAppExampleProject.iOS/Resources/Default-Portrait.png
+MobileAppExampleProject/MobileAppExampleProject.iOS/Resources/Default-Portrait@2x.png
+MobileAppExampleProject/MobileAppExampleProject.iOS/Resources/LaunchScreen.storyboard
