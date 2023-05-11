@@ -48,7 +48,9 @@ namespace CalculatorApp
         }
         private void HandleClickOnClear(object sender, EventArgs e)
         {
-
+            //Reset label.text and the isFirstClick value
+            isFirstClick = true;
+            label.Text = "";
         }
 
     }
