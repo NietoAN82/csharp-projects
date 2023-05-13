@@ -81,12 +81,6 @@
 
         private TextBox chatHistoryTextBox;
         private TextBox messageTextBox;
-        private Button sendButton;
-        private Server server;
-        public Form1(Server server)
-        {
-            InitializeComponent();
-            this.server = server;
-        }
+        private Button sendButton;             
     }
 }

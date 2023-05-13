@@ -82,6 +82,18 @@ namespace ChatApp
             }
             Debug.WriteLine("This function is returning messages.");
         }
+        // Send a message to a specific client
+        public void Send(string message)
+        {
+            // Convert the message to a byte array
+            byte[] buffer = Encoding.ASCII.GetBytes(message);
 
+            // Send the message to all connected clients
+            foreach (TcpClient client in clients)
+            {
+                NetworkStream clientStream = client.GetStream();
+                clientStream.Write(buffer, 0, buffer.Length);
+            }
+        }
     }
 }
