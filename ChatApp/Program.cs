@@ -1,3 +1,5 @@
+
+
 namespace ChatApp
 {
     internal static class Program
@@ -11,7 +13,11 @@ namespace ChatApp
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+
+            //Create a new instance of the Server class to start the server
+            Server server = new Server();
+
+            Application.Run(new Form1(server));
         }
     }
 }
